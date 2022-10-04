@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Calistoga&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Calistoga", cursive;
+  color: #fff;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  flex-direction: column;
+}
+.container .wrapper {
+  max-width: 400px;
+  width: 90%;
+  height: 400px;
+  background: blue;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container .wrapper.active {
+  display: none;
+}
+
+.container .wrapper .alert {
+  display: none;
+  width: 90%;
+  border-radius: 8px;
+  color: #fff;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.container .wrapper .alert.error {
+  background: red;
+  display: block;
+}
+
+.container .wrapper .alert.pending {
+  background: rgb(39 191 5);
+  display: block;
+}
+.container .wrapper .card,
+.container .wrapper .name,
+.container .wrapper button {
+  width: 90%;
+  margin: 10px 20px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: #444;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.container .wrapper .name {
+  font-size: 1em;
+  font-weight: 400;
+  color: #333;
+}
+
+.container .wrapper .name:is(:focus, :valid) {
+  border: 2px solid green;
+}
+
+.container .wrapper .name::placeholder {
+  color: #333;
+}
+.container .wrapper label {
+  font-size: 1.5em;
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+}
+.container .wrapper button {
+  background: green;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border: 2px solid rgb(14, 102, 14);
+  transition: 0.3s;
+}
+
+.container .wrapper button:hover {
+  background: #fff;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 400;
+  color: green;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border: 2px solid rgb(14, 102, 14);
+}
+
+.container .wrapper button:active {
+  transform: scale(1.05);
+}
+
+.container .wrapper .card:is(:focus, :valid) {
+  font-size: 1em;
+  font-weight: 400;
+  color: #333;
+}
+
+.container .wrapper .card option {
+  color: #000;
+  border-radius: 3px;
+}
+
+.container .success {
+  max-width: 600px;
+  width: 90%;
+  height: 400px;
+  background-color: blue;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: linear-gradient(to right, blue, green, red);
+  position: relative;
+}
+
+.container .success.active {
+  display: flex;
+}
+.container .success p {
+  font-size: 1.5em;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+  text-align: center;
+  width: 80%;
+}
+
+.container .success .close {
+  position: absolute;
+  top: 1px;
+  right: 7px;
+  color: #333;
+  border-radius: 2px;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.container .success .close:hover .fa-window-close {
+  color: blue;
+}
+
+.container .success .close:active {
+  transform: scale(1.34);
+  color: #fff;
+}
